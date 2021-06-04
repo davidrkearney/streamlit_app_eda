@@ -1,4 +1,4 @@
-# Simple Streamlit App
+# Simple Streamlit EDA App
 This is a simple  app that takes a data set and runs a pandas profiling package on them.
 ## Directories
 **data/:** holds the data used in the App
