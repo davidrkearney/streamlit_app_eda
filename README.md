@@ -1,8 +1,5 @@
-# Simple Data Science Streamlit App
-This is a simple data science app that takes a data set about Data Scientists
-and runs a pandas profiling package on them. This is for demonstration purposes
-to show how easy it is to create and share an app to Streamlit Sharing.
-
+# Simple Streamlit App
+This is a simple  app that takes a data set and runs a pandas profiling package on them.
 ## Directories
 **data/:** holds the data used in the App
 
