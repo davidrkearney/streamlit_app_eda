@@ -19,7 +19,11 @@ look perfect as they are auto-generated but lets get some visuals of what we are
             fig = plt.figure()
             ax= fig.add_subplot(111)
 
+
+            #Type of EDA plot
             plt.hist(column)
+
+
             plt.title(val)
             plt.ylabel("Counts")
 
