@@ -17,7 +17,8 @@ st.subheader("Let's take a look at some Fiscal Data! :face_with_monocle:")
 page = st.sidebar.radio("Pick a Page:", ["Home", "Pandas Profile", "Basic Graphs"])
 
 #load data
-url = 'https://raw.githubusercontent.com/davidrkearney/Kearney_Data_Science/master/_notebooks/df_panel_fix.csv'
+#url = 'https://raw.githubusercontent.com/davidrkearney/Kearney_Data_Science/master/_notebooks/df_panel_fix.csv'
+url = 'https://raw.githubusercontent.com/davidrkearney/colab-notebooks/main/datasets/depression_data.csv'
 train_set = pd.read_csv(url, error_bad_lines=False)
 
 if page == "Home":
