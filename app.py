@@ -17,17 +17,8 @@ st.subheader("Let's take a look at some Fiscal Data! :face_with_monocle:")
 page = st.sidebar.radio("Pick a Page:", ["Home", "Pandas Profile", "Basic Graphs", "Audio Page"])
 
 import streamlit as st
-import plotly.graph_objs as go
 import numpy as np
 
-st.title("Plotly examples")
-
-st.header("Chart with two lines")
-
-trace0 = go.Scatter(x=[1, 2, 3, 4], y=[10, 15, 13, 17])
-trace1 = go.Scatter(x=[1, 2, 3, 4], y=[16, 5, 11, 9])
-data = [trace0, trace1]
-st.write(data)
 
 
 
@@ -37,7 +28,8 @@ st.write(data)
 #url = 'https://raw.githubusercontent.com/davidrkearney/Kearney_Data_Science/master/_notebooks/df_panel_fix.csv'
 #url = 'https://raw.githubusercontent.com/davidrkearney/colab-notebooks/main/datasets/depression_data.csv'
 #url='https://raw.githubusercontent.com/davidrkearney/colab-notebooks/main/datasets/diabetes.csv'
-url='https://stocks-snp-500.herokuapp.com/stocks/turnover_tables.csv?_size=max'
+#url='https://stocks-snp-500.herokuapp.com/stocks/turnover_tables.csv?_size=max'
+url='https://stocks-snp-500.herokuapp.com/stocks/index_stocks_table.csv?_size=max'
 
 train_set = pd.read_csv(url, error_bad_lines=False)
 
