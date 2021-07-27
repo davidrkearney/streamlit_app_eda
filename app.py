@@ -1,5 +1,17 @@
+
 import streamlit as st
 import pandas as pd
+import os
+import pandas as pd
+import numpy as np
+import pandas_datareader.data as web
+import datetime
+import sqlalchemy as db
+from sqlalchemy import create_engine
+import sqlite3
+import pandas as pd
+from sqlalchemy.sql.schema import Column
+
 
 #import python pages
 from modules.home_page import run_home
@@ -20,8 +32,33 @@ import streamlit as st
 import numpy as np
 
 
+def main():
+    
+    st.title("Welcome to the Stocks Dashboard :star:")
+    st.subheader("You can find SNP 500 Stock Information Here :smile:")
+    
+    Menu_Items = ["View all Stocks", "Search for Stocks by Price"]
+    Menu_Choices = st.sidebar.selectbox('Select the Options', Menu_Items)
+
+    url='https://stocks-snp-500.herokuapp.com/stocks/index_stocks_table.csv?_size=max'
+    df = pd.read_csv(url, error_bad_lines=False)
+
+    if Menu_Choices == "View all Stocks":
+    
+        st.write("Below are All the Stocks Available")
+        st.table(df)
+        
+    elif Menu_Choices == "Search for Stocks by Price":
+        
+        st.write("Determine the ratings you would like to view:") 
+        stock_level =  st.slider('Slide & Pick',0.0, 200.0, (20.0, 70.0))
+        st.write(stock_level) 
+        filtered_table = df[df['FXAIX_stock'].between(stock_level[0],stock_level[1])]
+        st.table(filtered_table)
 
 
+if __name__ == "__main__":
+    main()
 
 
 #load data
@@ -37,6 +74,9 @@ if page == "Home":
     run_home(train_set)
 
 elif page == "Pandas Profile":
+    run_pandas(train_set)
+
+elif page == "Slider Page":
     run_pandas(train_set)
 
 elif page == "Audio Page":
