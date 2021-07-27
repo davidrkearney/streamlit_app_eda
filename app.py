@@ -4,13 +4,7 @@ import pandas as pd
 import os
 import pandas as pd
 import numpy as np
-import pandas_datareader.data as web
 import datetime
-import sqlalchemy as db
-from sqlalchemy import create_engine
-import sqlite3
-import pandas as pd
-from sqlalchemy.sql.schema import Column
 
 
 #import python pages
